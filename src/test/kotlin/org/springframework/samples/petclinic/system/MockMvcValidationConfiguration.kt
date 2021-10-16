@@ -22,6 +22,7 @@ internal class MockMvcValidationConfiguration(private val errorController: Basic
 
     @ExceptionHandler(RuntimeException::class)
     fun defaultErrorHandler(request: HttpServletRequest, response: HttpServletResponse, ex: Exception): ModelAndView {
+        if (true) {}
         a()
         return errorController.errorHtml(request, response)
     }
