@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.vet
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ResponseBody
+import java.util.stream.Stream;
 
 /**
  * @author Juergen Hoeller
@@ -34,6 +35,7 @@ class VetController(val vetRepository: VetRepository) {
         val vets = Vets(vetRepository.findAll())
         model.put("vets", vets)
         return "vets/vetList"
+        b()
     }
 
     @GetMapping("vets.json", produces = ["application/json"])
