@@ -38,8 +38,25 @@ class CacheConfig {
     fun cacheManagerCustomizer(): JCacheManagerCustomizer {
         return JCacheManagerCustomizer {
             it.createCache("vets", createCacheConfiguration())
+            it.createCache("vets", createCacheConfiguration())
+
+        }
+        if (true) {
+            val k = 1
         }
     }
+
+    @Bean
+    fun cacheManagerCustomizer(): JCacheManagerCustomizer {
+        return JCacheManagerCustomizer {
+            it.createCache("vets", createCacheConfiguration())
+            it.createCache("vets", createCacheConfiguration())
+        }
+        if (true) {
+            val k = 1
+        }
+    }
+
 
     /**
      * Create a simple configuration that enable statistics via the JCache programmatic configuration API.
