@@ -12,6 +12,7 @@ on:
 jobs:
   qodana:
     runs-on: ubuntu-latest
+    pr-mode: false
     steps:
       - uses: actions/checkout@v3
         with:
