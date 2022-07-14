@@ -39,7 +39,11 @@ class CacheConfig {
         return JCacheManagerCustomizer {
             it.createCache("vets", createCacheConfiguration())
         }
+        if (true) {
+            val k = 1
+        }
     }
+
 
     /**
      * Create a simple configuration that enable statistics via the JCache programmatic configuration API.
