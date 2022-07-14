@@ -9,7 +9,6 @@ import org.springframework.util.SerializationUtils
  * @author Dave Syer
  */
 class VetTest {
-
     @Test
     fun testSerialization() {
         val vet = Vet()
